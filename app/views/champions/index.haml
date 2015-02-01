@@ -1,2 +1,9 @@
 .content
-  hello world
+  .index-header
+    %h2
+      champions:
+  .index-body
+    %ul
+      - @champions.each do |c|
+        %li
+          c.name
