@@ -47,3 +47,8 @@ group :development do
 	gem 'pry-rails'
 	gem 'quiet_assets'
 end
+
+#gems to deal with images
+gem "paperclip", "~> 4.1"
+gem 'aws-sdk'
+gem 'figaro'
