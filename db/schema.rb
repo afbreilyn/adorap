@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150202215914) do
+ActiveRecord::Schema.define(version: 20150203172031) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,10 @@ ActiveRecord::Schema.define(version: 20150202215914) do
     t.text     "lore"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "loadingart_file_name"
+    t.string   "loadingart_content_type"
+    t.integer  "loadingart_file_size"
+    t.datetime "loadingart_updated_at"
   end
 
 end
