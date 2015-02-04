@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150203172031) do
+ActiveRecord::Schema.define(version: 20150204201815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20150203172031) do
     t.string   "loadingart_content_type"
     t.integer  "loadingart_file_size"
     t.datetime "loadingart_updated_at"
+    t.string   "primary_damage_type"
   end
 
 end
