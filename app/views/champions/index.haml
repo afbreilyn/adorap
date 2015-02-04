@@ -7,5 +7,11 @@
       - @champions.each do |c|
         %li
           = c.name
-          = image_tag c.loadingart
-
+          = image_tag c.loadingart(:small)
+          = c.primary_damage_type
+          %ul 
+            - c.abilities.each do |a|
+              %li
+                = a.key
+                = a.name
+                = a.scales_from
