@@ -4,4 +4,7 @@ class ChampionsController < ApplicationController
     @champions = Champion.all
 	end
 
+  def show
+    @champion = Campion.find_by(:id)
+  end
 end
