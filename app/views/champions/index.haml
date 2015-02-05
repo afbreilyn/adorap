@@ -7,11 +7,21 @@
       - @champions.each do |c|
         %li
           = c.name
-          = image_tag c.loadingart(:small)
+          = image_tag c.thumbnail(:small)
           = c.primary_damage_type
-          %ul 
-            - c.abilities.each do |a|
-              %li
-                = a.key
-                = a.name
-                = a.scales_from
+          %ul
+            %li.ability.passive
+              = c.abilities.find_by(key: 'Passive').name
+            %li.ability
+              = c.abilities.find_by(key: 'Q').name
+            %li.ability
+              = c.abilities.find_by(key: 'W').name
+            %li.ability
+              = c.abilities.find_by(key: 'E').name
+            %li.ability
+              = c.abilities.find_by(key: 'R').name
+            / - c.abilities.each do |a|
+            /  %li
+            /    = a.key
+            /    = a.name
+            /    = a.scales_from
