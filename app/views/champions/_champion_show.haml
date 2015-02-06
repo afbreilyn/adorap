@@ -1,0 +1,15 @@
+#show_stuff
+  - if @champion
+    @champion.name
+
+    %ul
+    %li.ability.passive
+      = @champion.abilities.find_by(key: 'Passive').name
+    %li.ability
+      = @champion.abilities.find_by(key: 'Q').name
+    %li.ability
+      = @champion.abilities.find_by(key: 'W').name
+    %li.ability
+      = @champion.abilities.find_by(key: 'E').name
+    %li.ability
+      = @champion.abilities.find_by(key: 'R').name

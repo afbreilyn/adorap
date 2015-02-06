@@ -7,4 +7,5 @@ class ChampionsController < ApplicationController
   def show
     @champion = Campion.find_by(:id)
   end
+  
 end
