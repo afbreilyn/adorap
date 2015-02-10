@@ -1,3 +1,24 @@
 .content
   = render 'champ_list'
   = render 'champion_show'
+
+:javascript
+
+  $('.champ_name').click(function(e) {
+    champ_id = e.currentTarget.id;
+    $.ajax( {
+      type: 'GET',
+      url : '/champions',
+      dataType : 'text',
+      data : { js_id: champ_id },
+      success : function(data) {
+        console.log("success");
+      },
+      error : function(xhr, status, errorThrown) {
+        var response = $.parseJSON(xhr.responseText);
+        console.log(response);
+        console.log(errorThrown);
+      }
+    } )
+  } );
+
