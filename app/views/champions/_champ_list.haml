@@ -2,9 +2,8 @@
   %h2
     champions:
 .index-body
-  %ul
-    - @champions.each do |c|
-      %li{ id: c.name.downcase + 'list' + c.id.to_s, class: 'champ_name' }
-        = c.name
-        = image_tag c.thumbnail(:small)
-        = c.primary_damage_type
+  - @champions.each do |c|
+    .champ_info{ id: "champ#{ c.id }" }
+      = c.name
+      = image_tag c.thumbnail(:small)
+      = c.primary_damage_type

@@ -1,23 +1,26 @@
 .content
-  = render 'champ_list'
-  = render 'champion_show'
+  #champ_list
+    = render 'champ_list'
+  #champ_show
+    = render 'champion_show'
 
 :javascript
 
-  $('.champ_name').click(function(e) {
+  $('.champ_info').click(function(e) {
     champ_id = e.currentTarget.id;
+    var el = e.currentTarget;
+    var champ_id = $(this).attr('id').split('champ')[1]
     $.ajax( {
       type: 'GET',
-      url : '/champions',
+      url : '/champions/' + champ_id,
+      action : 'show',
       dataType : 'text',
-      data : { js_id: champ_id },
-      success : function(data) {
-        console.log("success");
+      success : function(responseData) {
+        $('#champ_show').html(responseData);
       },
       error : function(xhr, status, errorThrown) {
         var response = $.parseJSON(xhr.responseText);
-        console.log(response);
-        console.log(errorThrown);
+        console.log("failure")
       }
     } )
   } );
