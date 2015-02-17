@@ -40,6 +40,8 @@ gem 'spring',        group: :development
 
 gem 'haml'
 gem 'haml-rails'
+gem 'formtastic'
+gem 'formtastic-bootstrap'
 
 group :development do
 	gem 'better_errors'
