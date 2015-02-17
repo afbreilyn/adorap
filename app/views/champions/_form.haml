@@ -1,1 +1,13 @@
 this is the form partial
+%br
+
+.champ-form.centered
+  = semantic_form_for @champion, url: url do |f|
+    = f.inputs do
+      = f.semantic_errors
+      = f.input :name
+      = f.input :lore
+      = f.input :primary_damage_type
+      = f.input :thumbnail
+    = f.actions do
+      = f.action :submit, id: 'champ_submit'
