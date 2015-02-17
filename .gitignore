@@ -16,5 +16,7 @@
 /tmp
 
 # Ignore my private notes
-
 /notes_for_me.txt
+
+# Ignore application configuration
+/config/application.yml
