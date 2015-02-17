@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :champions, only: [:index, :show]
+  resources :champions, only: [:index, :show, :edit, :update, :create, :new]
 
   root to: 'champions#index'
 
