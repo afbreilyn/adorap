@@ -20,6 +20,7 @@ module Adoraplol
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # set paperclip defaults to use the AWS servers
     config.paperclip_defaults = {
       :storage => :s3,
       :s3_credentials => {
@@ -28,6 +29,9 @@ module Adoraplol
         :secret_access_key => ENV["S3_SECRET_KEY"]
       }
     }
+    
+    # some config for heroku deployment
+    config.initialize_on_precompile = false
     
   end
 end

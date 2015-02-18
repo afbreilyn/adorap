@@ -58,3 +58,6 @@ gem 'figaro'
 #css stuff
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'sass-rails', '>= 3.2'
+
+#security stuff
+gem 'devise'
