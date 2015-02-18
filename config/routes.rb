@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  devise_for :users 
+    # if i want furthur custimaztion with these routes i'll extract these into their own controllers
+    #, :controllers => { :registrations => "registrations", :sessions => "sessions" }
+  resources :users, only: [:show]
+
   resources :champions, only: [:index, :show, :edit, :update, :create, :new]
 
   root to: 'champions#index'
