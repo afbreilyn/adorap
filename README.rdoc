@@ -1,28 +1,10 @@
-== README
+== AD OR AP?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In [League Of Legends](http://www.leagueoflegends.com) there are two types of damage, AP (ability power) or AD (attack damage). But with 125 champions it becomes hard to remember which character does which type of damage. So: AD or AD?
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+# Tech:
+  * RoR 4
+  * Haml styling
+  * Devise gem for security
+  * Bootstrap styling
+  * Amazong servers for image hosting
