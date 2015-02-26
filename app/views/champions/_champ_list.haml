@@ -1,9 +1,13 @@
-.index-header
-  %h2
-    champions:
-.index-body
-  - @champions.each do |c|
-    .champ_info{ id: "champ#{ c.id }" }
-      = c.name
-      = image_tag c.thumbnail(:small)
-      = c.primary_damage_type
+.col-md-4
+  .index-header.t-white
+    %h2
+      pick a champion:
+  %hr.fading-horizontal-black.lil-margin-bot
+  .index-body.fading-vertical
+    - @champions.each do |c|
+      .champ-info.t-white.lil-padding{ id: "champ#{ c.id }" }
+        = image_tag c.thumbnail(:small), class: 'black-border'
+        = c.name
+        = c.primary_damage_type
+        %hr.fading-horizontal-blue
+  %hr.fading-horizontal-black.med-margin-top

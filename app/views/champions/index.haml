@@ -1,4 +1,4 @@
-.content
+.champ-content.container.bg-dark-grey
   #champ_list
     = render 'champ_list'
   #champ_show
@@ -6,7 +6,7 @@
 
 :javascript
 
-  $('.champ_info').click(function(e) {
+  $('.champ-info').click(function(e) {
     champ_id = e.currentTarget.id;
     var el = e.currentTarget;
     var champ_id = $(this).attr('id').split('champ')[1]

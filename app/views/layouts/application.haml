@@ -8,15 +8,16 @@
 
   %body
 
-    - if notice
-      .notice
-        =raw notice
-    - if alert
-      .alert
-        =raw alert
+  - if notice
+    .notice
+      =raw notice
+  - if alert
+    .alert
+      =raw alert
 
-    = render 'shared/header'
+  = render 'shared/header'
 
-    = yield
+  = yield
 
-    = render 'shared/footer'
+  = render 'shared/footer'
+  

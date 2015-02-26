@@ -1,0 +1,118 @@
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  font-size: 1em;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  background: #e9eaec;
+  font-weight: 300;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+//stolen from css-tricks.com:
+
+.fading-horizontal-blue {
+    border: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+    height: 2px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #e9eaec, #6ac4cc, #e9eaec); 
+    background-image:    -moz-linear-gradient(left, #e9eaec, #6ac4cc, #e9eaec); 
+    background-image:     -ms-linear-gradient(left, #e9eaec, #6ac4cc, #e9eaec); 
+    background-image:      -o-linear-gradient(left, #e9eaec, #6ac4cc, #e9eaec); 
+}
+
+.fading-horizontal-black {
+    border: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+    height: 2px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #e9eaec, black, #e9eaec); 
+    background-image:    -moz-linear-gradient(left, #e9eaec, black, #e9eaec); 
+    background-image:     -ms-linear-gradient(left, #e9eaec, black, #e9eaec); 
+    background-image:      -o-linear-gradient(left, #e9eaec, black, #e9eaec); 
+}
+
+
+//stolen from stack-overflow
+
+// BODY {margin: 0; padding: 25px; }
+
+.fading-vertical {
+    /* Regular borders as a fallback for IE8 and lower. */
+    border: solid #00f; border-width: 0 1px;
+
+    /* To be able to position generated content. */
+    position: relative;
+
+    /* Some irrelevant general styles. */
+    margin: 0 auto;
+    // padding: 0 20px;
+    // width: 200px;
+}
+
+/* Instead of this IE9+ hack (valid one though), it's recommended
+   to use IE's conditional comments. JsFiddle just seems to lack
+   support for conditional comments in HEAD section of HTML document. */
+BODY:last-child .fading-vertical {
+    /* Resetting borders for IE9+ and modern browsers that support gradients. */
+    border: none;
+}
+
+.fading-vertical:before,
+.fading-vertical:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+}
+
+.fading-vertical:before {left: 0; }
+.fading-vertical:after {right: 0; }
+
+/* See http://www.colorzilla.com/gradient-editor/ for CSS-gradient generator. */
+.fading-vertical:before,
+.fading-vertical:after {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(106,196,204,0)), color-stop(24%,rgba(106,196,204,0.48)), color-stop(50%,rgba(106,196,204,1)), color-stop(79%,rgba(106,196,204,0.42)), color-stop(100%,rgba(106,196,204,0))); /* Chrome,Safari4+ */
+    background: -moz-linear-gradient(top,  rgba(106,196,204,0) 0%, rgba(106,196,204,0.48) 24%, rgba(106,196,204,1) 50%, rgba(106,196,204,0.42) 79%, rgba(106,196,204,0) 100%); /* FF3.6+ */
+    background:  -ms-linear-gradient(top,  rgba(106,196,204,0) 0%, rgba(106,196,204,0.48) 24%, rgba(106,196,204,1) 50%, rgba(106,196,204,0.42) 79%, rgba(106,196,204,0) 100%); /* IE10+ */
+    background:   -o-linear-gradient(top,  rgba(106,196,204,0) 0%, rgba(106,196,204,0.48) 24%, rgba(106,196,204,1) 50%, rgba(106,196,204,0.42) 79%, rgba(106,196,204,0) 100%); /* Opera 11.10+ */
+}
+
+
+
+
+
